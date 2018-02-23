@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Using figaro to hide secret keys
 gem 'figaro'
+
+# Using flickraw to connect with flickr
+gem 'flickraw'
