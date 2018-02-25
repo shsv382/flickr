@@ -1,0 +1,18 @@
+<%= form_tag("/home", method: "get") do %>
+	<%= label_tag(:user_id, "ID пользователя Flickr") %>
+	<%= text_field_tag(:user_id) %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+<% if @user_id %>
+	<h1>Photos by id <%= @user_id %></h1>
+<% end %>
+<ul>
+	<% @images.each do |image| %>
+		<li>
+			<% if !image['url_m'].blank? %>
+				<%= image_tag image['url_m'], {height:200} %>
+			<% end %>
+		</li>
+	<% end %>
+</ul>
