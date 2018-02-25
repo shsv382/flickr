@@ -4,7 +4,7 @@
 	<%= submit_tag("Search") %>
 <% end %>
 
-<% if @user_id %>
+<% if !@user_id.blank? %>
 	<h1>Photos by id <%= @user_id %></h1>
 <% end %>
 <ul>
